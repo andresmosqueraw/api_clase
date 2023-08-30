@@ -18,9 +18,22 @@ else {
      * EndPoints correctos
      */
     $endPoint = (array_filter($uri)[2]);
+    $complement = (array_key_exists(3, $uri)) ? ($uri)[3] : 0;
     echo $endPoint;
     $method = $_SERVER['REQUEST_METHOD'];
     echo $method;
+
+    switch($endPoint){
+        case 'courses':
+            if (isset($_POST))
+            {
+             // $course = new ControllerCourses($method, $complement, $_POST);                 
+            } else {
+                // $course = new ControllerCourses($method, $complement, 0);
+            }
+            $course->index();
+        break;
+    }
 }
 
 ?>
