@@ -10,8 +10,9 @@
     header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
     $con = Connection::connect();
-    var_dump($con);
+    // var_dump($con);
 
     $routes = new RoutesController();
     $routes->index();
+    
  ?>
