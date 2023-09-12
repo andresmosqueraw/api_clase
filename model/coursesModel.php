@@ -40,6 +40,8 @@ class ModelCourses {
         }
     }
 
+    // Hacer el put y el crud para los estudiantes
+
     static public function putCourses(array $data){
         $query = "UPDATE courses SET nameCourse = ?, durationCourse = ? WHERE idCourse = ?; ";
         $statement = Connection::connect()->prepare($query);
